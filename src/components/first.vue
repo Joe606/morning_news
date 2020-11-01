@@ -3,25 +3,47 @@
     <h1>overseas news</h1>
     <div>
       <ul>
-        <li>
-          <a href="https://nytimes.com/" target="_blank">new york times</a>
+      <li class="image"  v-for="item in items"  v-bind:key='item'>
+          <a v-bind:href="item.url" target="_blank">
+            <img v-bind:src="item.img_src" alt="图片无法显示" />
+          </a>
+          <div class="desc">{{item.name}}</div>
         </li>
-        <li>
-          <a href="https://washingtonpost.com/" target="_blank"
-            >washington post</a
-          >
+      <!--
+        <li class="image">
+          <a href="https://nytimes.com/" target="_blank">
+            <img src="@/assets/nytimes.png" alt="图片无法显示" />
+          </a>
+          <div class="desc">new york times</div>
         </li>
-        <li>
-          <a href="https://wsj.com/" target="_blank">wall street journal</a>
+
+        <li class="image">
+          <a href="https://washingtonpost.com/" target="_blank">
+            <img src="@/assets/washingtonpost.png" alt="图片无法显示" />
+            
+          </a>
+          <div class="desc">washington post</div>
         </li>
-        <li>
-          <a href="https://bbc.com/" target="_blank">britain broadcast</a>
+        <li class="image">
+          <a href="https://wsj.com/" target="_blank">
+          <img src="@/assets/wsj.png" alt="图片无法显示" />
+          </a>
+          <div class="desc">wall street journal</div>
         </li>
-        <li>
-          <a href="https://rfi.fr/cn/" target="_blank"
-            >radio france international</a
-          >
+        <li class="image">
+          <a href="https://bbc.com/" target="_blank">
+          <img src="@/assets/bbc.png" alt="图片无法显示" />
+          </a>
+          <div class="desc">britain broadcast</div>
         </li>
+        <li class="image">
+          <a href="https://rfi.fr/cn/" target="_blank">
+            <img src="@/assets/rfi.png" alt="图片无法显示" />
+          </a>
+          <div class="desc">radio france international</div>
+        </li>
+        -->
+
       </ul>
     </div>
   </section>
@@ -30,38 +52,59 @@
 
 <script>
 export default {
-  name: "Fist"
+
+  name: "First",
+  //props:['src'],
+  data:function(){
+    return {
+      items:[
+      {name:'New York Times',url:'https://nytimes.com/',img_src:require('@/assets/nytimes.png')},//动态渲染图片需要require()修饰
+      {name:'Washington Post',url:'https://washingtonpost.com/',img_src:require('@/assets/wp.png')},
+      {name:'Wall Street Journal',url:'https://wsj.com/',img_src:require('@/assets/wsj.png')},
+      {name:'British Broadcasting Corporation',url:'https://bbc.com/',img_src:require('@/assets/bbc.png')},
+      {name:'Radio France Internationale',url:'https://rfi.fr/',img_src:require('@/assets/rfi.png')},
+           ]}
+    
+  }
   
 };
+
 </script>
 
 
+
+
 <style scoped>
-ul{
-  list-style-type:none;
+h1{
+  text-decoration: props;
 }
-a {
-  
-  margin:1px solid blue;
-  border: 1px  green;
-  padding:0px solid red;
-  
-  width: 800px;
-  height: 60px;
-
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 30px;
-  font-weight: lighter;
-
-  text-align: left;
-  text-decoration: none;
-  
-  
-  color: mediumspringgreen;
-
-  
+ul {
+  list-style-type: none;
 }
-a:hover {
-  color: deeppink;
+
+.image {
+  float: left;
+  width: 240px;
+  height: 150px;
+  margin: 7px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.image:hover {
+  border: 1px solid rgb(204, 16, 16);
+  color:greenyellow;
+}
+
+img {
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+}
+.desc {
+  font-family: cursive;
+  padding: 10px;
+  text-align: center;
 }
 </style>

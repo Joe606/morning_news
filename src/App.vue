@@ -6,6 +6,7 @@
       <router-link to="/second">DOMESTIC NEWS</router-link>
     </div>
     <router-view />
+    <br><br>
   <div id='foot'>
     <footer>天气×日期</footer>
   </div>
@@ -18,13 +19,13 @@ body {
   margin: 0px;
   border-left: 0px;
   padding-left: 0px;
-  background-color: royalblue;
+  background-color: rgb(111, 129, 129);
 
   border-radius: 8px;
 }
 img {
   width: 600px;
-  height: 250px;
+  height: 200px;
   margin: 0px;
   border:0px;
   padding: 0px;
@@ -40,7 +41,7 @@ img {
 }
 
 #nav {
-  background-color: black;
+  background-color: rgb(69, 77, 50);
   margin: 0px;
   border: 0px;
   padding-top: 20px;
@@ -53,7 +54,8 @@ img {
 
 #nav a {
   font-weight: bold;
-  color: #090de7;
+  color: #5456f3;
+  text-decoration: none;
 }
 
 #nav a.router-link-exact-active {
@@ -61,6 +63,10 @@ img {
 }
 
 #foot{
+  position: relative;
+ 
+  bottom: -80px;
   color:dimgray;
+  clear: both;
 }
 </style>
