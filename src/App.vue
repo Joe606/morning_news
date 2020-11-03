@@ -6,12 +6,11 @@
       <router-link to="/second">DOMESTIC NEWS</router-link>
     </div>
     <router-view />
-    <br><br>
-  <div id='foot'>
-    <footer>天气×日期</footer>
+    <br /><br />
+    <div id="foot">
+      <footer>天气×日期</footer>
+    </div>
   </div>
-  </div>
-  
 </template>
 
 <style>
@@ -27,7 +26,7 @@ img {
   width: 600px;
   height: 200px;
   margin: 0px;
-  border:0px;
+  border: 0px;
   padding: 0px;
 
   border-radius: 8px;
@@ -46,7 +45,6 @@ img {
   border: 0px;
   padding-top: 20px;
   padding-bottom: 20px;
-  
 
   font-size: 30px;
   border-radius: 20px;
@@ -62,11 +60,11 @@ img {
   color: #d30d0d;
 }
 
-#foot{
+#foot {
   position: relative;
- 
+
   bottom: -80px;
-  color:dimgray;
+  color: dimgray;
   clear: both;
 }
 </style>

@@ -3,7 +3,6 @@ import VueRouter from "vue-router";
 import First from "../components/first.vue";
 import Second from "../components/second.vue";
 
-
 Vue.use(VueRouter);
 
 const routes = [
@@ -23,6 +22,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
+  mode: "hash",
   routes: routes
 });
 
